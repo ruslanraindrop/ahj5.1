@@ -7,6 +7,7 @@ function popoverVisible(e) {
     const text = document.getElementById('popover_text');
     title.remove();
     text.remove();
+    toggle.classList.remove('popover');
   } else {
     e.preventDefault();
     const title = document.createElement('h3');
