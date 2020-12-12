@@ -7,13 +7,14 @@
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
     "lint": "eslint .",
-    "test": "jest",
+    "test": "jest --testPathPattern=./src/",
     "coverage": "jest --coverage",
     "preshow:coverage": "npm run coverage",
     "show:coverage": "live-server coverage/lcov-report",
     "preshow:dist": "npm run build",
     "show:dist": "live-server dist",
-    "e2e": "jest --testPathPattern=./e2e/ --runInBand"
+    "e2e": "jest --testPathPattern=./e2e/ --runInBand",
+    "ci": "start-server-and-test start http://localhost:9000 test"
   },
   "author": "coursar",
   "license": "MIT",
